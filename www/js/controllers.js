@@ -13,14 +13,14 @@ angular.module('starter.controllers', [])
 
 .controller('LoginController', function($scope, $timeout, Login){
   // Form data for the login modal
-  $scope.loginData = Login.getLoginData;
+    $scope.loginData = Login.getLoginData;
 
     $scope.login = true;
         
   // Perform the login action when the user submits the login form
-  $scope.doLogin = function(){
-      $scope.login = Login.doLogin($scope.loginData, $timeout, $scope.login);
-  }
+    $scope.doLogin = function(){
+        $scope.login = Login.doLogin($scope.loginData, $timeout, $scope.login);
+    }
     
 //    $scope.loginData = {};
 //    
@@ -34,13 +34,18 @@ angular.module('starter.controllers', [])
 //            alert('Login!');
 //        }, 1000);
 //    }
-    
       
 })
 
 .controller('AccountCtrl', function($scope) {
 })
 
+.controller('OngsCtrl', function($scope) {
+})
+
 .controller('ReportCtrl', function($scope) {
-    
+    $scope.updateEditor = function() {
+        var element = document.getElementById("description");
+        element.style.height = element.scrollHeight + "px";
+    };
 });

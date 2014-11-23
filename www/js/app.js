@@ -58,8 +58,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
   
+    .state('savepet.ongs', {
+      url: '/ongs',
+      views: {
+        'tab-dash': {
+            templateUrl: 'templates/ongs.html',
+            controller: 'OngsCtrl'
+        }
+      }
+    })
   
-  //Animais
     .state('savepet.animals', {
       url: '/animal/list',
       views: {

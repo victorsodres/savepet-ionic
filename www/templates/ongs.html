@@ -1,0 +1,18 @@
+<ion-view title="Save Pet">
+  <ion-content has-header="true" padding="true">
+      <h1>ONGs</h1>
+      <div class="list">
+        <label class="item item-input">
+            <span class="input-label">Assunto</span>
+            <select ng-model="report.listOngs">
+              <option>WWF</option>
+              <option>Huebamzai</option>
+            </select>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Descrição</span>
+          <textarea id="descriptionOng" ng-model="report.description" disabled style="width: 60%;"></textarea>
+        </label>
+      </div>
+  </ion-content>
+</ion-view>
