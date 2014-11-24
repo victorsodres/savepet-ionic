@@ -72,7 +72,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/animal/list',
       views: {
         'tab-dash': {
-          templateUrl: 'templates/tab-animals.html',
+          templateUrl: 'templates/animals.html',
           controller: 'AnimalCtrl'
         }
       }
@@ -80,7 +80,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('savepet.animal-detail', {
       url: '/animal/:animalId',
       views: {
-        'tab-animals': {
+        'tab-dash': {
           templateUrl: 'templates/animal-detail.html',
           controller: 'AnimalDetailCtrl'
         }

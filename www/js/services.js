@@ -8,7 +8,7 @@ angular.module('starter.services', [])
 
   // Some fake testing data
   var animals = [
-    { id: 0, name: 'Scruff McGruff' },
+    { id: 0, name: 'Scruff McGruff', img: "dog.jpeg", race: "Bu", age: "3", place: "R. 123", description: "asdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsad" },
     { id: 1, name: 'G.I. Joe' },
     { id: 2, name: 'Miss Frizzle' },
     { id: 3, name: 'Ash Ketchum' }
@@ -23,6 +23,14 @@ angular.module('starter.services', [])
       return animals[animalId];
     }
   }
+})
+
+.factory('Util', function(){
+    return {
+        updateEditor: function(element) {
+            element.style.height = element.scrollHeight + "px";
+        }
+    };
 })
 
 .factory('Login', function(){

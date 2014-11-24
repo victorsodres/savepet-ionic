@@ -3,12 +3,18 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope) {
 })
 
-.controller('AnimalCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('AnimalCtrl', function($scope, Animals) {
+  $scope.animals = Animals.all();
 })
 
-.controller('AnimalDetailCtrl', function($scope, $stateParams, Animals) {
-  $scope.animal = Animals.get($stateParams.animalId);
+.controller('AnimalDetailCtrl', function($scope, $stateParams, Animals, Util) {
+    $scope.animal = Animals.get($stateParams.animalId);
+    
+    $scope.updateEditor = function(){
+        var element = document.getElementById("description");
+        Util.updateEditor(element);
+    };
+    
 })
 
 .controller('LoginController', function($scope, $timeout, Login){
@@ -21,19 +27,6 @@ angular.module('starter.controllers', [])
     $scope.doLogin = function(){
         $scope.login = Login.doLogin($scope.loginData, $timeout, $scope.login);
     }
-    
-//    $scope.loginData = {};
-//    
-//    $scope.doLogin = function() {
-//        console.log('Doing login', $scope.loginData);
-//
-//        // Simulate a login delay. Remove this and replace with your login
-//        // code if using a login system
-//        $timeout(function() {
-//            $scope.login = false;
-//            alert('Login!');
-//        }, 1000);
-//    }
       
 })
 
@@ -43,9 +36,14 @@ angular.module('starter.controllers', [])
 .controller('OngsCtrl', function($scope) {
 })
 
-.controller('ReportCtrl', function($scope) {
-    $scope.updateEditor = function() {
+.controller('ReportCtrl', function($scope, Util) {
+//    $scope.updateEditor = function() {
+//        var element = document.getElementById("description");
+//        element.style.height = element.scrollHeight + "px";
+//    };
+    
+    $scope.updateEditor = function(){
         var element = document.getElementById("description");
-        element.style.height = element.scrollHeight + "px";
+        Util.updateEditor(element);
     };
 });
