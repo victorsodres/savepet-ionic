@@ -8,7 +8,7 @@ angular.module('starter.services', [])
 
   // Some fake testing data
   var animals = [
-    { id: 0, name: 'Scruff McGruff', img: "dog.jpeg", race: "Bu", age: "3", place: "R. 123", description: "asdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsadasdsadsad" },
+    { id: 0, name: 'Scruff McGruff', img: "dog.jpeg", race: "Bu", age: "3", place: "R. 123", description: "asdsadsadasdsadsadasdsadsadasdsadsadasd" },
     { id: 1, name: 'G.I. Joe' },
     { id: 2, name: 'Miss Frizzle' },
     { id: 3, name: 'Ash Ketchum' }

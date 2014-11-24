@@ -95,6 +95,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'LoginController'
         }
       }
+    })
+  
+  .state('savepet.account.register', {
+      url: '/account/register',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/register.html',
+          controller: 'LoginController'
+        }
+      }
     });
 
   // if none of the above states are matched, use this as the fallback
