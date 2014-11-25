@@ -1,4 +1,4 @@
-/home/victor/development/ionic/savePet/platforms/android/ant-build/CordovaApp-debug-unaligned.apk : \
-/home/victor/development/ionic/savePet/platforms/android/ant-build/CordovaApp.ap_ \
-/home/victor/development/ionic/savePet/platforms/android/ant-build/classes.dex \
-/home/victor/development/ionic/savePet/platforms/android/CordovaLib/ant-build/classes.jar \
+/home/victorsodre/JavaUtil/ionic/savepet-ionic/platforms/android/ant-build/CordovaApp-debug-unaligned.apk : \
+/home/victorsodre/JavaUtil/ionic/savepet-ionic/platforms/android/ant-build/CordovaApp.ap_ \
+/home/victorsodre/JavaUtil/ionic/savepet-ionic/platforms/android/ant-build/classes.dex \
+/home/victorsodre/JavaUtil/ionic/savepet-ionic/platforms/android/CordovaLib/ant-build/classes.jar \

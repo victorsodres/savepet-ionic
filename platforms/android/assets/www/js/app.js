@@ -30,15 +30,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
     // setup an abstract state for the tabs directive
-    .state('tab', {
-      url: "/tab",
+    .state('savepet', {
+      url: "/savepet",
       abstract: true,
       templateUrl: "templates/tabs.html"
     })
 
     // Each tab has its own nav history stack:
-
-    .state('tab.dash', {
+    //Dash
+    .state('savepet.dash', {
       url: '/dash',
       views: {
         'tab-dash': {
@@ -48,37 +48,66 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('tab.friends', {
-      url: '/friends',
+    .state('savepet.reports', {
+      url: '/reports',
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
+        'tab-dash': {
+          templateUrl: 'templates/relatorio-ocorrencia.html',
+          controller: 'ReportCtrl'
         }
       }
     })
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
+  
+    .state('savepet.ongs', {
+      url: '/ongs',
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
-          controller: 'FriendDetailCtrl'
+        'tab-dash': {
+            templateUrl: 'templates/ongs.html',
+            controller: 'OngsCtrl'
+        }
+      }
+    })
+  
+    .state('savepet.animals', {
+      url: '/animal/list',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/animals.html',
+          controller: 'AnimalCtrl'
+        }
+      }
+    })
+    .state('savepet.animal-detail', {
+      url: '/animal/:animalId',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/animal-detail.html',
+          controller: 'AnimalDetailCtrl'
         }
       }
     })
 
-    .state('tab.account', {
+    .state('savepet.account', {
       url: '/account',
       views: {
         'tab-account': {
           templateUrl: 'templates/tab-account.html',
-          controller: 'AccountCtrl'
+          controller: 'LoginController'
+        }
+      }
+    })
+  
+  .state('savepet.account.register', {
+      url: '/account/register',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/register.html',
+          controller: 'LoginController'
         }
       }
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/savepet/dash');
 
 });
-

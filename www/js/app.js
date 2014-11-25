@@ -97,7 +97,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
   
-  .state('savepet.account.register', {
+  .state('savepet.account-register', {
       url: '/account/register',
       views: {
         'tab-account': {

@@ -1,2 +1,2 @@
-/home/victor/development/ionic/savePet/platforms/android/ant-build/AndroidManifest.xml : \
-/home/victor/development/ionic/savePet/platforms/android/AndroidManifest.xml \
+/home/victorsodre/JavaUtil/ionic/savepet-ionic/platforms/android/ant-build/AndroidManifest.xml : \
+/home/victorsodre/JavaUtil/ionic/savepet-ionic/platforms/android/AndroidManifest.xml \
