@@ -34,6 +34,12 @@ angular.module('starter.controllers', [])
     
 })
 
+.controller('RegisterCtrl', function($scope){
+    $scope.submitRegister = function(){
+    
+    }
+})
+            
 .controller('OngsCtrl', function($scope) {
 })
 

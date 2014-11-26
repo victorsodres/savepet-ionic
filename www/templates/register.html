@@ -1,34 +1,36 @@
-<ion-view>
-    Cadastrar
-    <form ng-submit="submitReport()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Nome</span>
-          <input type="text" ng-model="register.name">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Endereço</span>
-          <input type="text" ng-model="register.place">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">CPF</span>
-          <input type="number" ng-model="register.cpf">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Data Nascimento</span>
-          <input type="date" ng-model="report.date">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Email</span>
-          <input type="text" ng-model="register.email">
-        </label>          
-        <label class="item item-input">
-          <span class="input-label">Senha</span>
-          <input type="password" ng-model="register.password">
-        </label>          
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Registrar</button>
-        </label>
-      </div>
-    </form>
+<ion-view title="Save Pet">
+    <ion-content>
+        Cadastrar
+        <form ng-submit="submitRegister()">
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Nome</span>
+              <input type="text" ng-model="register.name">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Endereço</span>
+              <input type="text" ng-model="register.place">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">CPF</span>
+              <input type="number" ng-model="register.cpf">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Data Nascimento</span>
+              <input type="date" ng-model="report.date">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input type="text" ng-model="register.email">
+            </label>          
+            <label class="item item-input">
+              <span class="input-label">Senha</span>
+              <input type="password" ng-model="register.password">
+            </label>          
+            <label class="item">
+              <button class="button button-block button-positive" type="submit">Registrar</button>
+            </label>
+          </div>
+        </form>
+    </ion-content>
 </ion-view>

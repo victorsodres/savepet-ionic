@@ -38,8 +38,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     // Each tab has its own nav history stack:
     //Dash
-    .state('savepet.dash', {
+    .state('dash', {
       url: '/dash',
+      parent: 'savepet',
       views: {
         'tab-dash': {
           templateUrl: 'templates/tab-dash.html',
@@ -48,8 +49,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('savepet.reports', {
+    .state('reports', {
       url: '/reports',
+      parent: 'savepet',
       views: {
         'tab-dash': {
           templateUrl: 'templates/relatorio-ocorrencia.html',
@@ -58,8 +60,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
   
-    .state('savepet.ongs', {
+    .state('ongs', {
       url: '/ongs',
+      parent: 'savepet',
       views: {
         'tab-dash': {
             templateUrl: 'templates/ongs.html',
@@ -68,8 +71,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
   
-    .state('savepet.animals', {
+    .state('animals', {
       url: '/animal/list',
+      parent: 'savepet',
       views: {
         'tab-dash': {
           templateUrl: 'templates/animals.html',
@@ -87,8 +91,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('savepet.account', {
+    .state('account', {
       url: '/account',
+      parent: 'savepet',
       views: {
         'tab-account': {
           templateUrl: 'templates/tab-account.html',
@@ -97,12 +102,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
   
-  .state('savepet.account-register', {
-      url: '/account/register',
+  .state('register', {
+      url: '/register',
+      parent: 'savepet',
       views: {
         'tab-account': {
           templateUrl: 'templates/register.html',
-          controller: 'LoginController'
+          controller: 'RegisterCtrl'
         }
       }
     });
