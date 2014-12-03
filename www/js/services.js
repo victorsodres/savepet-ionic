@@ -25,6 +25,36 @@ angular.module('starter.services', [])
   }
 })
 
+.service('Users', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var users = [
+    { id: 1, name: 'Administrador', user: "admin", password: "123456" },
+  ];
+
+  return {
+    all: function() {
+      return users;
+    },
+    get: function(userId) {
+      // Simple index lookup
+      return users[userId];
+    },
+    autentica: function(username, pass){
+      var autentica = false;
+      for(i = 0; i < users.length; i++){
+        if(users[i].name == username && users[i].password == pass)
+            return autentica = true;
+      }
+      return autentica;
+    },
+    set: function(user){
+        users.push(user);
+    }
+  }
+})
+
 .factory('Util', function(){
     return {
         updateEditor: function(element) {
@@ -33,7 +63,7 @@ angular.module('starter.services', [])
     };
 })
 
-.factory('Login', function(){
+.factory('Login', [ 'Users', function(){
     // Form data for the login modal
     var loginData = {};
     
@@ -42,14 +72,20 @@ angular.module('starter.services', [])
             return loginData;
         },
         doLogin:  function(loginData, timeout, login) {
-            console.log('Doing login', loginData.username, loginData.password);
 
-            // Simulate a login delay. Remove this and replace with your login
-            // code if using a login system
-            timeout(function() {
-                alert('Login efetuado com sucesso!');
-                return login = false;
-            }, 1000);
+            if(Users.autentica(loginData.username, loginData.password)){
+                // Simulate a login delay. Remove this and replace with your login
+                // code if using a login system
+                timeout(function() {
+                    alert('Login efetuado com sucesso!');
+                    return login = false;
+                }, 1000);
+            }else{
+                timeout(function() {
+                    alert('Usuário ou senha incorreto!');
+                    return login = true;
+                }, 1000);
+            }
         }
     };
-});
+}]);
