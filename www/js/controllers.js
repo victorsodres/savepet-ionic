@@ -17,7 +17,7 @@ angular.module('starter.controllers', [])
     
 })
 
-.controller('LoginController', function($scope, $timeout, Login){
+.controller('LoginController', function($scope, $timeout, Login, $ionicModal){
   // Form data for the login modal
     $scope.loginData = Login.getLoginData;
 
@@ -27,11 +27,37 @@ angular.module('starter.controllers', [])
     $scope.doLogin = function(){
         $scope.login = Login.doLogin($scope.loginData, $timeout, $scope.login);
     }
-      
+    
+    
+    //Modal esqueceu a senha
+    $ionicModal.fromTemplateUrl('templates/forgotPass.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function(modal){
+        $scope.modal = modal;
+    });
+    
+    $scope.openModal = function(){
+        $scope.modal.show();
+    }
+    
+    $scope.closeModal = function(){
+        $scope.modal.hide();
+    }
+    
+    $scope.$on('$destroy', function(){
+        $scope.modal.remove();
+    });
+    
+    $scope.doRecoveryPass = function(){
+        if(Login.doRecoveryPass($scope.loginData, $timeout))
+            $scope.closeModal();
+    }
+    
 })
 
-.controller('AccountCtrl', function($scope) {
-    
+.controller('AccountCtrl', function($scope, $ionicModal) {
+
 })
 
 .controller('RegisterCtrl', function($scope){
@@ -40,7 +66,12 @@ angular.module('starter.controllers', [])
     }
 })
             
-.controller('OngsCtrl', function($scope) {
+.controller('OngsCtrl', function($scope, Ongs) {
+    $scope.ongs = Ongs.all();
+    
+    $scope.getOng = function(id){
+        $scope.ongDescription = Ongs.get(id).description;
+    }
 })
 
 .controller('ReportCtrl', function($scope, Util) {
